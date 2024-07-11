@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="max.struts.vds.regist.VisitorDTO" table="visitor_mst">
+<id name="vid" column="v_id">
+<generator class="native"/>
+</id>
+<property name="stCode" column="st_code"/>
+<property name="distCode" column="dist_code"/>
+
+<property name="visitorName" column="visitor_name"/>
+
+<property name="visitorEmail" column="visitor_email"/>
+
+<property name="visitorAdd" column="visitor_add"/>
+<property name="visitorPhone" column="visitor_phone"/>
+</class>
+
+
+</hibernate-mapping>

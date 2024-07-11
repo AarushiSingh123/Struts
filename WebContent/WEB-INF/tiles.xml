@@ -1,0 +1,64 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+<definition name="yogiLayout" path="/lagout/baseLayout.jsp">
+<put name="title" value="WEL COME VDS YOGI"/>
+<put name="harendra" value="/lagout/header.jsp"/>
+<put name="lalit" value="/lagout/leftMenu.jsp"/>
+<put name="bhola" value="/lagout/body.jsp"/>
+<put name="foopa" value="/lagout/footer.jsp"/>
+</definition>
+
+<definition name="modiLayout" path="/lagout/baseLayout.jsp">
+<put name="title" value="WEL COME VDS  MODI"/>
+<put name="harendra" value="/lagout/header.jsp"/>
+<put name="lalit" value="/lagout/leftMenu.jsp"/>
+<put name="bhola" value="/lagout/body.jsp"/>
+<put name="foopa" value="/lagout/footer.jsp"/>
+</definition>
+
+
+
+<definition name="tdriver" extends="modiLayout">
+<put name="bhola" value="/WEB-INF/jsp/driver.jsp"/>
+
+</definition>
+
+
+
+<definition name="vdriver" extends="modiLayout">
+<put name="bhola" value="/WEB-INF/jsp/driverview.jsp"/>
+
+</definition>
+
+
+
+<definition name="S" extends="modiLayout">
+<put name="bhola" value="/WEB-INF/jsp/sdriver.jsp"/>
+
+</definition>
+
+
+<definition name="tlgn" extends="modiLayout">
+<put name="bhola" value="/WEB-INF/jsp/b.jsp"/>
+
+</definition>
+
+<definition name="tve" extends="yogiLayout">
+
+<put name="bhola" value="/WEB-INF/jsp/visitorEntry.jsp"/></definition>
+    
+    <definition name="tsearch" extends="yogiLayout">
+   <put name="bhola" value="/WEB-INF/jsp/search.jsp"/>
+</definition>
+    
+    <definition name="tview" extends="yogiLayout">
+   <put name="bhola" value="/WEB-INF/jsp/view.jsp"/>
+</definition>
+    
+   
+	
+	
+</tiles-definitions>

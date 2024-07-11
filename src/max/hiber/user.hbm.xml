@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="dto.UserDTO" table="usr_dto_mst">
+<id name="uid" column="u_id">
+<generator class="native"/>
+</id>
+<property name="name" column="u_name"/>
+<property name="mobile" column="u_mobile"/>
+
+<property name="adhar" column="u_adhar"/>
+
+<property name="add" column="u_add"/>
+
+<property name="gndr" column="u_gndr"/>
+
+</class>
+
+
+</hibernate-mapping>

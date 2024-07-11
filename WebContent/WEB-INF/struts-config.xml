@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+ "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <form-beans>
+       <form-bean name="lgn" type="max.struts.vds.login.LoginBean"/>
+       <form-bean name="ve" type="max.struts.vds.regist.VisitorBean"></form-bean>
+    <form-bean name="driverbean" type="max.driver.DriverBean"/>
+  
+    </form-beans>
+
+     <action-mappings>
+     
+     <!-- new Driver -->
+     <action path="/newDriver" name="driverbean" parameter="method"   type="max.driver.DriverAction" scope="request">
+       <forward name="driver" path="tdriver"></forward>
+       <forward name="saveDriver" path="S"></forward>
+       <forward name="viewdriver" path="vdriver"></forward>
+       
+       
+       </action>
+     
+     
+     <!-- end new Driver -->
+     
+     
+       <action path="/login" name="lgn" parameter="method"   type="max.struts.vds.login.LoginAction" scope="request">
+       <forward name="lgn" path="tlgn"></forward>
+       
+       </action>
+       
+       <action path="/visitorEntry" name="ve" parameter="method" type="max.struts.vds.regist.VisitorAction">
+        <forward name="ve" path="tve"/>
+        <forward name="E" path="/E.jsp"/>
+       
+       </action>
+       
+       
+       
+       
+       <action path="/viewAction" name="ve" parameter="method" type="max.view.ViewAction">
+        <forward name="view" path="tview"/>
+        <forward name="E" path="/E.jsp"/>
+       
+       </action>
+       
+       
+        
+        
+        <action path="/searchAction" name="ve" parameter="method" type="max.struts.vds.search.SearchAction">
+      
+        <forward name="search" path="tsearch"/>
+         <forward name="vsearch" path="tsearch"/>
+       
+       </action>
+       
+        
+    </action-mappings>
+    
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+	<!-- <message-resources  parameter="ApplicationResources"  null="false"  /> -->
+		
+	 <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+      	
+</struts-config>
